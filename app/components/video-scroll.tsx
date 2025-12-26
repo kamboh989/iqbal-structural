@@ -8,12 +8,12 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            
+            {/* Agar aap title ya koi content add karna chahte ho */}
           </>
         }
       >
         <video
-          src="/videos/v1.mp4" // path to your video file
+          src="https://res.cloudinary.com/dwsdl518r/video/upload/v1766743479/v1_xmxgch.mp4" // Cloudinary link
           autoPlay
           loop
           muted
@@ -23,5 +23,5 @@ export function HeroScrollDemo() {
         />
       </ContainerScroll>
     </div>
-  );
+  );    
 }

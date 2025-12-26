@@ -2,10 +2,6 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-//import {GridPattern,getRandomPattern  } from "@/components/ui/background";
-
-// const p = getRandomPattern(10);
-
 
 interface VideoScrollProps {
   videoSrc?: string;
@@ -15,7 +11,7 @@ interface VideoScrollProps {
 }
 
 export function VideoScrollHero({
-  videoSrc = "/videos/v1.mp4",
+  videoSrc = "https://res.cloudinary.com/dwsdl518r/video/upload/v1766743479/v1_xmxgch.mp4",
   enableAnimations = true,
   className = "",
   startScale = 0.50,
@@ -55,18 +51,9 @@ export function VideoScrollHero({
   const shouldAnimate = enableAnimations && !shouldReduceMotion;
 
   return (
-     
-      
     <div className={`relative ${className}`}>
-      
-          
-      {/* Video */}
       <div ref={containerRef} className="relative h-[200vh] bg-background">
-        {/* Fixed Video Container */}
         <div className="sticky top-0 w-full h-screen flex items-center justify-center">
-           
-      
-         
           <div
             className="relative flex items-center justify-center will-change-transform w-full h-full z-1"
             style={{
@@ -74,33 +61,24 @@ export function VideoScrollHero({
               transformOrigin: "center center",
             }}
           >
-            <section className="relative flex min-h-40 items-center  ">
-  
-      </section>
             <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  className={`object-cover transition-all duration-700 ${
-    progress >= 1
-      ? "absolute top-0 left-0 w-full h-full rounded-none" 
-      : "w-[100vw] h-[40vh] sm:h-[50vh] md:h-[90vh] lg:h-[95vh] rounded-2xl"
-  }`}
-  style={{
-    boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
-  }}
->
-  
-  
-
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={`object-cover transition-all duration-700 ${
+                progress >= 1
+                  ? "absolute top-0 left-0 w-full h-full rounded-none"
+                  : "w-[100vw] h-[40vh] sm:h-[50vh] md:h-[90vh] lg:h-[95vh] rounded-2xl"
+              }`}
+              style={{
+                boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
+              }}
+            >
               <source src={videoSrc} type="video/mp4" />
-              
               Your browser does not support the video tag.
             </video>
-          
 
-            {/* Video Overlay Content */}
             <motion.div
               className="absolute inset-0 flex items-center justify-center rounded-2xl"
               initial={{ opacity: 0 }}
@@ -120,7 +98,7 @@ export function VideoScrollHero({
                     damping: 25,
                   }}
                 >
-                  {/* Heading */}
+                  {/* Heading Text */}
                 </motion.h1>
                 <motion.p
                   className="text-sm md:text-lg lg:text-xl text-white/80 max-w-2xl px-4"
@@ -138,13 +116,9 @@ export function VideoScrollHero({
                 </motion.p>
               </div>
             </motion.div>
-            
           </div>
-          
         </div>
       </div>
-        
     </div>
-  
   );
 }
