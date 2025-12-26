@@ -1,23 +1,17 @@
 'use client';
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Github, Dribbble } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 export default function FooterGlow() {
   const socialLinks = [
     { icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61584510311404' },
     { icon: Instagram, name: 'Instagram', href: 'https://www.instagram.com/iqbalstructuralsolutions/' },
-   
-    
   ];
 
   const contactInfo = [
     { text: 'contact@iqbalstructuralsolutions', href: 'mailto:contact@iqbalstructuralsolutions' },
     { text: '+92 3213333792', href: 'tel:+923213333792' },
-    {
-  text: 'Office#113, mall of Faisalabad, canal road, Faisalabad',
-  href: 'https://www.google.com/maps/search/Office#113,+mall+of+Faisalabad,+Kashmir+pul+canal+road,+Faisalabad',
-},
-
+    { text: 'Office#113, mall of Faisalabad, canal road, Faisalabad', href: 'https://www.google.com/maps/search/Office#113,+mall+of+Faisalabad,+Kashmir+pul+canal+road,+Faisalabad' },
   ];
 
   return (
@@ -26,12 +20,8 @@ export default function FooterGlow() {
       <style jsx global>{`
         .glass {
           backdrop-filter: blur(6px) saturate(180%);
-          background: linear-gradient(
-            180deg,
-            rgba(255, 250, 240, 0.9) 0%,
-            rgba(255, 228, 196, 0.9) 100%
-          );
-          border: 1px solid rgba(244, 120, 63, 0.15);
+          background: linear-gradient(180deg, rgba(255,250,240,0.9) 0%, rgba(255,228,196,0.9) 100%);
+          border: 1px solid rgba(244,120,63,0.15);
           border-radius: 20px;
           display: flex;
           justify-content: center;
@@ -47,116 +37,85 @@ export default function FooterGlow() {
         <div className="absolute right-1/4 -bottom-32 h-[28rem] w-[28rem] rounded-full bg-orange-300/35 blur-[140px]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(244,120,63,0.18),transparent_65%)]" />
       </div>
+{/* Footer Content */}
+<div className="glass relative z-10 mx-auto flex max-w-6xl flex-col items-center md:items-start gap-10 md:gap-45 px-4 py-12 md:flex-row md:justify-between">
+  
+  {/* Brand */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <a href="/" className=" flex items-center ">
+      <Image
+        src="/logo.png"
+        alt="SteelBuild Logo"
+        width={150}
+        height={50}
+        className="object-contain"
+      />
+    </a>
+   
+  </div>
 
-      {/* Footer Content */}
-      <div className="glass relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-15 md:gap-35 px-6 py-12 md:flex-row md:items-start md:justify-between">
-        {/* Brand */}
-        <div className="flex flex-col items-center md:items-start">
-          <a href="/" className="mb-4 flex items-center gap- h-15">
-  <Image
-    src="/logo.png"   // public/logo.png
-    alt="SteelBuild Logo"
-    width={150}
-    height={50}
-    className="object-contain"
-  />
-</a>
-<p className="mb-6 max-w-3xs text-center text-sm text-gray-700 md:text-left">
-  Trusted steel structure solutions focused on quality and precision.
-</p>
-
-        </div>
-
-        {/* Links */}
-        <nav className="flex w-full flex-col gap-10 md:gap-30 text-center md:w-auto md:flex-row md:text-left">
-
-         {/* Company */}
-  <div>
-    <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500">
-      Company
+  {/* Links */}
+  <nav className="flex w-full flex-col gap-10 md:gap-40 items-center md:items-start text-center md:text-left md:flex-row md:w-auto">
+    
+    {/* Company Links */}
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500">
+        Company
+      </div>
+      <ul className="space-y-2 text-sm text-gray-700 flex flex-col items-center md:items-start">
+        <li><a href="/#about" className="hover:text-orange-600 transition">About Us</a></li>
+        <li><a href="/#services" className="hover:text-orange-600 transition">Services</a></li>
+        <li><a href="/projects" className="hover:text-orange-600 transition">Projects</a></li>
+        <li><a href="/contact" className="hover:text-orange-600 transition">Contact us</a></li>
+      </ul>
     </div>
-    <ul className="space-y-2 text-sm text-gray-700">
-      <li>
-        <a
-          href="/#about"
-          className="hover:text-orange-600 transition"
-        >
-          About Us
-        </a>
-      </li>
-      <li>
-        <a
-          href="/#services"
-          className="hover:text-orange-600 transition"
-        >
-          Services
-        </a>
-      </li>
-      <li>
-        <a
-          href="/projects"
-          className="hover:text-orange-600 transition"
-        >
-          Projects
-        </a>
-      </li>
-      <li>
-        <a
-          href="/contact"
-          className="hover:text-orange-600 transition"
-        >
-          Contact us
-        </a>
-      </li>
-    </ul>
-  </div>
-{/* Social Links */}
-<div>
-  <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500 text-center md:text-left">
-    Follow Us
-  </div>
 
-  <ul className="space-y-2 text-sm text-gray-700 flex flex-col items-center md:items-start">
-    {socialLinks.map(({ icon: Icon, name, href }) => (
-      <li key={name} className="w-full flex justify-center md:justify-start">
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-secondary-foreground/70 hover:text-orange-600 transition"
-        >
-          <Icon className="size-5 text-orange-500" />
-          <span>{name}</span>
-        </a>
-      </li>
-    ))}
-  </ul>
+    {/* Social Links */}
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500">
+        Follow Us
+      </div>
+      <ul className="space-y-2 text-sm text-gray-700 flex flex-col items-center md:items-start">
+        {socialLinks.map(({ icon: Icon, name, href }) => (
+          <li key={name} className="flex">
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-secondary-foreground/70 hover:text-orange-600 transition"
+            >
+              <Icon className="w-5 h-5 text-orange-500" />
+              <span>{name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500">
+        Contact Us
+      </div>
+      <ul className="space-y-2 text-sm text-gray-700 flex flex-col items-center md:items-start">
+        {contactInfo.map(({ text, href }) => (
+          <li key={text}>
+            <a
+              href={href}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="hover:text-orange-600 transition block max-w-2xs break-words"
+            >
+              {text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </nav>
 </div>
 
-
-
-          {/* Contact Info */}
-          <div>
-            <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-orange-500">
-              Contact Us
-            </div>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {contactInfo.map(({ text, href }) => (
-                <li key={text}>
-                  <a
-                    href={href}
-                    target={href.startsWith('http') ? '_blank' : undefined}
-                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="hover:text-orange-600 transition block max-w-2xs break-words"
-                  >
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </div>
 
       {/* Bottom */}
       <div className="relative z-10 mt-10 text-center text-xs text-gray-600">
