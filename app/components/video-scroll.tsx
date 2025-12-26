@@ -13,7 +13,7 @@ export function HeroScrollDemo() {
         }
       >
         <video
-          src="/videos/v1.MP4" // path to your video file
+          src="/videos/v1.mp4" // path to your video file
           autoPlay
           loop
           muted

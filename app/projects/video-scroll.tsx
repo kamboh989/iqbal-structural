@@ -15,7 +15,7 @@ interface VideoScrollProps {
 }
 
 export function VideoScrollHero({
-  videoSrc = "/videos/v1.MP4",
+  videoSrc = "/videos/v1.mp4",
   enableAnimations = true,
   className = "",
   startScale = 0.50,
