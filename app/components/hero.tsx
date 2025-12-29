@@ -26,7 +26,7 @@ export default function HeroSlider() {
   });
 
   return (
-    <section className="relative h-[106vh] overflow-hidden -mt-10" id="home">
+    <section className="relative h-[75vh] md:h-[106vh] overflow-hidden -mt-10" id="home">
       {/* Background Images */}
       {images.map((img, index) => (
         <animated.div
@@ -48,7 +48,7 @@ export default function HeroSlider() {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center mt-10">
         <div className="max-w-6xl mx-auto md:mx-0 md:pl-20 px-6 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold leading-[1.2]">
             Steel Structure <br /> & Construction Solutions
           </h1>
 

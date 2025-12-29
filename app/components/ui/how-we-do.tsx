@@ -49,10 +49,11 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
   items,
 }) => {
   return (
-    <section className="w-full bg-background py-16 md:py-24">
+    <section className="w-full bg-background py-24 md:py-24">
       <div className="container mx-auto grid grid-cols-1 gap-12 px-4 md:grid-cols-3 md:gap-8 lg:gap-16">
         {/* Left Content */}
-        <div className="flex flex-col items-start justify-center text-center md:col-span-1 md:text-left">
+        <div className="flex flex-col items-center justify-center text-center md:col-span-1 md:items-start md:text-left">
+
           <span className="mb-2 text-sm font-medium uppercase tracking-widest text-orange-600">
             {subtitle}
           </span>

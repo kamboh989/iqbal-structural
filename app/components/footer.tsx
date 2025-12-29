@@ -38,7 +38,7 @@ export default function FooterGlow() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(244,120,63,0.18),transparent_65%)]" />
       </div>
 {/* Footer Content */}
-<div className="glass relative z-10 mx-auto flex max-w-6xl flex-col items-center md:items-start gap-10 md:gap-45 px-4 py-12 md:flex-row md:justify-between">
+<div className="glass relative z-10 mx-auto flex max-w-6xl flex-col items-center md:items-start gap-2 md:gap-25 px-4  md:py-12 md:flex-row md:justify-between">
   
   {/* Brand */}
   <div className="flex flex-col items-center md:items-start text-center md:text-left">
@@ -84,7 +84,7 @@ export default function FooterGlow() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-secondary-foreground/70 hover:text-orange-600 transition"
             >
-              <Icon className="w-5 h-5 text-orange-500" />
+              <Icon className="w-5 h-5 text-gray-700" />
               <span>{name}</span>
             </a>
           </li>

@@ -5,9 +5,9 @@ export default function ContactPage() {
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       {/* Left Side - Info Section */}
-      <div className="flex-1 bg-gradient-to-br from-orange-900 via-gray-800 to-orange-900 flex items-center justify-center p-12">
+      <div className="flex-1 bg-gradient-to-br from-orange-900 via-gray-800 to-orange-900 flex items-center justify-center p-6">
         <div className="max-w-md">
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6 md:mt-0 mt-10">
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6 md:mt-0 mt-15">
             Let’s discuss your <br /> steel structure project
           </h1>
           <p className="text-gray-300 text-lg">

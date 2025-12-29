@@ -104,7 +104,7 @@ const Blog8 = ({
   ],
 }: Blog8Props) => {
   return (
-    <section className="py-32 p-3" id="services">
+    <section className="py-5 md:py-30 p-3" id="services">
       <div className="container flex flex-col items-center gap-16">
         <div className="text-center">
           <h2 className="mx-auto mb-6 text-pretty text-3xl font-semibold md:text-4xl lg:max-w-3xl">
